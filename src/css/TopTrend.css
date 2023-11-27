@@ -51,6 +51,8 @@
     overflow: hidden;
 }
 
+
+
 .arrow {
     width: 50px;
     height: 50px;
@@ -75,6 +77,24 @@
     top: 45.5%;
     right: -0.05%;
     cursor: pointer;
+}
+
+.resume-container {
+    position: absolute;
+    cursor: pointer;
+    left: 39%;
+    top: 90%;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.resume-container.stop {
+    display: block;
+}
+
+.resume-container.resume {
+    display: none;
 }
 
 .selector-slide {
@@ -113,6 +133,11 @@
 }
 
 @media (max-width: 320px) {
+    .resume-container {
+        left: 18%;
+        top: 92.5%;
+    }
+
     .top-trend-container {
         margin: 10px 10px 10px 10px;
         min-width: 250px;
@@ -151,13 +176,22 @@
 }
 
 @media (max-width: 375px) and (min-width: 320px) {
+
+    .resume-container {
+        left: 20%;
+        top: 92.5%;
+    }
+
     .top-trend-container {
         margin: 30px 30px auto;
         max-height: 300px;
     }
 
     .top-trend-header {
-        font-size: 28px;
+        font-size: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .top-trend-content {
@@ -167,10 +201,12 @@
     }
 
     .top-trend-logo {
+        width: 85px;
+        height: 60px;
         max-width: 110px;
         max-height: 75px;
         position: absolute;
-        left: 71.5%;
+        left: 78.5%;
         top: -10%;
     }
 
@@ -256,6 +292,11 @@
         width: 25px;
         height: 5px;
     }
+
+    .resume-container {
+        left: 21.5%;
+        top: 92.5%;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 425px) {
@@ -313,6 +354,11 @@
         width: 27.5px;
         height: 5px;
     }
+
+    .resume-container {
+        left: 22.5%;
+        top: 92.5%;
+    }
 }
 
 @media (max-width: 550px) and (min-width: 500px) {
@@ -347,6 +393,11 @@
         margin: 3.75px;
         width: 28.5px;
         height: 5px;
+    }
+
+    .resume-container {
+        left: 25.5%;
+        top: 92.5%;
     }
 
 }
@@ -384,6 +435,11 @@
         width: 29.5px;
         height: 5px;
     }
+
+    .resume-container {
+        left: 27.5%;
+        top: 92.5%;
+    }
 }
 
 @media (max-width: 650px) and (min-width: 600px) {
@@ -419,6 +475,11 @@
         width: 30.5px;
         height: 5px;
     }
+
+    .resume-container {
+        left: 29.5%;
+        top: 92.5%;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 650px) {
@@ -453,6 +514,11 @@
         margin: 4.5px;
         width: 31.5px;
         height: 5px;
+    }
+
+    .resume-container {
+        left: 29.5%;
+        top: 91.75%;
     }
 }
 
@@ -509,6 +575,11 @@
         width: 32px;
         height: 5px;
     }
+
+    .resume-container {
+        left: 31.5%;
+        top: 92%;
+    }
 }
 
 
@@ -554,6 +625,11 @@
         rotate: 360deg;
         top: 50%;
         right: -0.05%;
+    }
+
+    .resume-container {
+        left: 36.5%;
+        top: 91.5%;
     }
 }
 

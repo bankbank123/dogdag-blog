@@ -6,20 +6,21 @@ import '../css/TopTrend.css'
 export default function TopTrend() {
 
     const headText = [
-        'Header 1',
-        'Header 2',
+        'แฟนบ่นทำไงดีครับ',
+        'แฟนชอบใช้ทำไงดีครับ',
         'Header 3',
         'Header 4',
         'Header 5',
     ]
 
     const textData = [
-        'Lorem ipsum dolor sit amet 1',
+        'แฟนขี้บ่นมาก บ่นได้ทุกเรื่อง ฟังหูชา',
         'Lorem ipsum dolor sit amet 2',
         'Lorem ipsum dolor sit amet 3',
         'Lorem ipsum dolor sit amet 4',
         'Lorem ipsum dolor sit amet 5',
     ];
+
 
     const [activePage, setActivePage] = useState(0);
 
@@ -28,8 +29,14 @@ export default function TopTrend() {
     };
 
     const prevButton = () => {
+        const fade_object = document.getElementById("fade")
         setActivePage(activePage - 1)
         if (activePage <= 0) return setActivePage(4)
+        fade_object.classList.add("animate-left")
+
+        fade_object.addEventListener("animationend", () => {
+            fade_object.classList.remove("animate-left")
+        })
     }
 
     const nextButton = () => {
@@ -40,10 +47,11 @@ export default function TopTrend() {
         <div className="top-trend-container">
             <img src={Trend} alt="" className='top-trend-logo' />
             <div className="top-trend-header">
-                {headText[activePage]}
+                <p>{headText[activePage]}</p>
             </div>
             <div className="top-trend-content">
-                {textData[activePage]}
+                <p id="fade">{textData[activePage]}</p>
+                
                 <div className="selector-slide">
                     <ul className='selector-ul'>
                         {textData.map((text, index) => (

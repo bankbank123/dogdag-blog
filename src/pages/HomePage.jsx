@@ -1,9 +1,9 @@
 import '../css/Home.css'
 import axiosClient from '../axiosClient';
 import { useNavigate } from "react-router-dom";
-import NavBar from '../components/navbar.jsx';
-import TopTrend from '../components/TopTrend.jsx';
-import TopicCard from '../components/TopicCard';
+import NavBar from '../components/navbar'
+import TopTrend from '../components/TopTrend'
+import TopicCard from '../components/TopicCard'
 
 export default function HomePage() {
 
@@ -19,11 +19,13 @@ export default function HomePage() {
       })
   }
 
+  
+
   return (
     <>
       <NavBar/>
       <TopTrend/>
-      
+      <TopicCard/>
     </>
   )
 }
